@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 # install zsh
 sudo apt-get install -y zsh
 # defaultのshellをzshに変更

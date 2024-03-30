@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 # ディレクトリを英語にする
 LANG=C xdg-user-dirs-gtk-update
 
