@@ -2,11 +2,9 @@
 Description=xremap service
 
 [Service]
-# restart periodically
-Restart=always
-ExecStart=/usr/bin/xremap $HOME/.local/share/chezmoi/xremap/config.yml
-User=root
-Group=root
+Type=simple
+Restart=on-failure
+ExecStart=/home/ishizawa/.cargo/bin/xremap /home/ishizawa/.local/share/chezmoi/xremap/config.yml
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
