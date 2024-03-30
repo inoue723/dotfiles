@@ -1,0 +1,4 @@
+modmap:
+  - name: default
+    remap:
+      CapsLock: Control_L

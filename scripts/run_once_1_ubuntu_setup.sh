@@ -12,10 +12,8 @@ source "$HOME/.cargo/env"
 
 # install xremap
 cargo install xremap --features gnome
-
-# start xremap automatically on boot
-sudo cp $HOME/ubuntu-setup/xremap/xremap.service /etc/systemd/system/
-sudo systemctl enable xremap.service
+# 起動時にxremapを起動する
+systemctl --user enable $HOME/.local/share/chezmoi/xremap/systemd/xremap.service
 
 # Install Docker
 # ref. https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
@@ -35,3 +33,17 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 # Use docker command without sudo
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+### gsettings
+# Dockの常時表示を無効化
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+# キーリピートの設定
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
+# キーディレイ
+gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+
+
+### 日本語入力
+sudo apt-get install -y fcitx5-mozc
+# fcitx5に切り替え
+im-config -n fcitx5
