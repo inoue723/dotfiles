@@ -28,3 +28,4 @@ setopt hist_expand
 # history共有
 setopt share_history
 export _ANTIGEN_INSTALL_DIR=${HOME}/.local/bin
+. "$HOME/.cargo/env"
