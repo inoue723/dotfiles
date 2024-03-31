@@ -25,7 +25,6 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 # キーディレイ
 gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 
-
 ### 日本語入力
 sudo apt-get install -y fcitx5-mozc
 # fcitx5に切り替え
@@ -84,5 +83,5 @@ sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
-### tmux
-sudo apt-get install -y tmux
+### 
+sudo apt-get install -y chrome-gnome-shell

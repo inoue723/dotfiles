@@ -2,3 +2,11 @@ modmap:
   - name: default
     remap:
       CapsLock: Control_L
+keymap:
+  - name: copy paste with super except terminal
+    application:
+      not: [WezTerm, Gnome-terminal]
+    remap:
+      Super-c: Control-c
+      Super-v: Control-v
+      Super-x: Control-x
