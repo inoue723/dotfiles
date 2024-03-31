@@ -1,0 +1,23 @@
+# Import additional configuration files
+import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
+
+[window]
+decorations = 'None'
+startup_mode = 'Maximized'
+opacity = 0.9
+
+# [shell]
+# program = "/bin/zsh"
+# args = ["-l", "-c", "tmux a -t 0 || tmux"]
+
+[font]
+size = 14  # Default: 11.25
+normal = { family = "Cica" }
+
+[keyboard]
+bindings = [
+    { key = "F", mods = "Command|Shift", action = "ToggleMaximized" },
+]
+
+[env]
+TERM = 'alacritty'
