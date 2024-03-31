@@ -41,3 +41,4 @@ antigen apply
 
 # zhh autosuggestionsのハイライトを見やすくする
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
+eval "$(~/.local/bin/mise activate zsh)"
