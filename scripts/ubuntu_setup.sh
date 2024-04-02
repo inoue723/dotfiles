@@ -29,8 +29,8 @@ gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 sudo apt-get install -y fcitx5-mozc
 # fcitx5に切り替え
 im-config -n fcitx5
-
-#!/usr/bin/zsh
+# fcitxを自動起動
+mkdir -p ~/.config/autostart && cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
 
 ### Install Docker
 # ref. https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
@@ -65,23 +65,18 @@ sudo apt-get install -y ./google-chrome-stable_current_amd64.deb && rm ./google-
 wget https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
 sudo apt-get install -y ./1password-latest.deb && rm ./1password-latest.deb
 
+### github cli
+sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+
 ### font
 wget https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip
 unzip Cica_v5.0.3.zip -d Cica
 mkdir -p .local/share/fonts && cp Cica/Cica-* "$_"
 rm -rf Cica Cica_v5.0.3.zip
-
-### alacritty
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-apt-get install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-cargo build --release
-sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
-# desktopアイコンの追加
-sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
-sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
-sudo desktop-file-install extra/linux/Alacritty.desktop
-sudo update-desktop-database
 
 ### 
 sudo apt-get install -y chrome-gnome-shell

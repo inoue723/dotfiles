@@ -7,4 +7,4 @@ Restart=on-failure
 ExecStart=/home/ishizawa/.cargo/bin/xremap /home/ishizawa/.local/share/chezmoi/xremap/config.yml
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
