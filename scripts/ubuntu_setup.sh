@@ -92,3 +92,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Ctrl>5'
 
 ### super + numberでアプリ切り替えを無効化
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+
+### ダブルタップでドラッグを無効化
+gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag false
