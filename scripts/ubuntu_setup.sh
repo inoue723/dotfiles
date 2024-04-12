@@ -78,6 +78,9 @@ unzip Cica_v5.0.3.zip -d Cica
 mkdir -p .local/share/fonts && cp Cica/Cica-* "$_"
 rm -rf Cica Cica_v5.0.3.zip
 
+### tmux
+sudo apt-get install -y tmux
+
 ### 
 sudo apt-get install -y chrome-gnome-shell
 
