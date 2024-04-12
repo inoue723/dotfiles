@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
  
 config.window_background_opacity = 0.8
 config.color_scheme = 'OneDark (base16)'
+config.enable_tab_bar = false
 
 -- key bindings
 config.keys = {}
