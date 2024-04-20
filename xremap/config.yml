@@ -10,3 +10,7 @@ keymap:
       Super-c: Control-c
       Super-v: Control-v
       Super-x: Control-x
+  - name: cursol moving like macOS
+    remap:
+      Alt_L-left: Home
+      Alt_L-right: End
