@@ -1,5 +1,6 @@
 # path
 export PATH=${HOME}/.local/bin:$PATH
+export PATH=${HOME}/platform-tools/:$PATH
 
 # history
 # メモリに保存される履歴の件数
