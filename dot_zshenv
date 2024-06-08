@@ -33,3 +33,6 @@ setopt share_history
 if [ -e "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
 fi
+
+# KDE plasma + wezterm
+export XCURSOR_THEME=Adwaita
