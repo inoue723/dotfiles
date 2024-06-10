@@ -12,6 +12,7 @@ config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
 -- key bindings
 config.keys = {
 	{ key = "l", mods = "ALT", action = wezterm.action.ShowLauncher },
+	{ key = "p", mods = "ALT", action = act.PaneSelect },
 	{
 		mods = "LEADER",
 		key = "s",

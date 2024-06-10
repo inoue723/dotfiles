@@ -36,3 +36,5 @@ fi
 
 # KDE plasma + wezterm
 export XCURSOR_THEME=Adwaita
+export XMODIFIERS=@im=fcitx
+
