@@ -3,7 +3,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 local mux = wezterm.mux
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.85
 config.color_scheme = "OneDark (base16)"
 config.enable_tab_bar = true
 config.scrollback_lines = 10000
