@@ -8,6 +8,9 @@ return {
     servers = {
       lua_ls = {},
       prismals = {},
+      biome = {
+        cmd = { "pnpm", "biome", "lsp-proxy" },
+      },
     },
   },
 }
