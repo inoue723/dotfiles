@@ -17,6 +17,10 @@ return {
       "vim",
       "yaml",
       "prisma",
+      "go",
+      "gomod",
+      "gowork",
+      "gosum",
     },
   },
 }

@@ -42,3 +42,19 @@ antigen apply
 # zhh autosuggestionsのハイライトを見やすくする
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 eval "$(~/.local/bin/mise activate zsh)"
+
+# nvim path
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+
+export PATH="$(go env GOPATH)/bin:$PATH"
+
+# for windows terminal
+keep_current_path() {
+  printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+}
+precmd_functions+=(keep_current_path)
+
+export PATH=/home/ishizawa/.tiup/bin:$PATH
