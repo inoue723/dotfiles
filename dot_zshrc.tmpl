@@ -51,8 +51,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$(go env GOPATH)/bin:$PATH"
 
-echo {{.chezmoi.os}}
-
 {{ if eq .chezmoi.os "linux" }}
 # if wsl
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
