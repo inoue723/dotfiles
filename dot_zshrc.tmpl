@@ -53,10 +53,13 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 
 echo {{.chezmoi.os}}
 
-{{ if eq .chezmoi.os "windows" }}
+{{ if eq .chezmoi.os "linux" }}
+# if wsl
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 keep_current_path() {
   printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
 }
 precmd_functions+=(keep_current_path)
+{{   end }}
 {{ end }}
 
